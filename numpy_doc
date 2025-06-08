@@ -1,0 +1,96 @@
+Numpy Library
+It is used to create N-dimensional Arrays.
+More efficient than Python lists.
+Has Broadcasting capabilities to quickly apply built-in func to Datasets.
+
+Arrays in Numpy
+1. Creation
+
+import numpy as np
+
+Converting Python List to Numpy array
+arr = np.array([1,2,3]) or
+arr_2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+Creation using Built-in Function
+np.arange(0,10)
+np.zeros(5)
+np.zeros((5,5))
+np.ones((4,4))
+np.linspace(0,10,3) # create linearly space array with 3 elements
+np.eye(3) #create Identity matrix
+
+Creation using Random Distribution of Data
+np.random.rand(1) #rand generates numbers from a uniform distribution between 0 and 1.
+np.random.rand((5,5))
+np.random.randn(10) #randn generates numbers from a normal distribution with a mean of 0 and a standard deviation of 1
+np.random.randint(0,101,5)
+np.random.randint(0,101,(5,5))
+
+Common Built-in Metthods of Numpy
+reshape(5,5)
+max()
+min()
+argmax()
+argmin()
+dtype()
+shape()
+
+Indexing & Selection
+
+Selecting single element 
+arr[3]
+
+Selecting a range of element
+arr[1:5]
+arr[:5]
+arr[5:]
+
+Broadcasting
+arr[:5] = 100 #Effects the Original array
+
+arr_copy = arr.copy()
+
+Selection from a 2-D array
+arr_2d = np.array([[5,10,15],[20,25,30],[35,40,45]])
+
+arr_2d.shape
+(3,3)
+
+arr_2d[0]
+[5,10,15]
+
+arr_2d[-1]
+[35,40,45]
+
+arr_2d[:2,1:]
+[[10,15],[25,30]]
+
+Conditional Selection
+arr = np.arange(1,11)
+arr[arr>4] #Apllied to each and every element of array, Returns the Index location when the results are true
+[5,6,7,8,9,10]
+
+
+Numpy Operations
+Arithmetic Operation in between arrays or array and scalar
+arr+5
+arr-2
+arr+arr #Both the arrays needs to be of the same shape
+
+Universal Functions
+np.sqrt(arr)
+np.sin(arr)
+np.log(arr)
+arr.sum()
+arr.mean()
+arr.max()
+arr.var()
+arr.std()
+
+On 2-D array
+arr_2d = np.arange(0,25).reshape(5,5)
+arr_2d.sum()
+arr_2d.sum(x=0/1) # 0- sum across the rows, 1- sum across the columns
+
+
